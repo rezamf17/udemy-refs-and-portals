@@ -3,7 +3,7 @@ import { useState, useRef } from "react";
 export default function Player() {
   const player = useRef()
 
-  const [playerName, setPlayerName] = useState("");
+  const [playerName, setPlayerName] = useState(null);
   // const [submitted, setSubmitted] = useState(false);
 
   // const handlePlayerName = (e) => {
@@ -13,6 +13,7 @@ export default function Player() {
 
   const handleClick = () => {
     setPlayerName(player.current.value);
+    player.current.value = "";
   }
 
   return (
