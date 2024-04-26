@@ -26,6 +26,7 @@ export default function TimerChallange({ title, targetTime }) {
   };
 
   const handleStop = () => {
+    dialog.current.open();
     clearInterval(timer.current);
   };
   return (
